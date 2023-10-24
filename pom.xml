@@ -189,9 +189,9 @@
     </plugins>
   </build>
   <scm>
-    <connection>scm:git:https://github.com/eclipse/jetty.toolchain.git</connection>
-    <developerConnection>scm:git:git@github.com:eclipse/jetty.toolchain.git</developerConnection>
-    <url>https://github.com/eclipse/jetty.toolchain/tree/master/jetty-setuid</url>
+    <connection>scm:git:https://github.com/jetty/jetty.setuid.git</connection>
+    <developerConnection>scm:git:git@github.com:jetty/jetty.setuid.git</developerConnection>
+    <url>https://github.com/jetty/jetty.setuid/tree/master</url>
     <tag>HEAD</tag>
   </scm>
 </project>
