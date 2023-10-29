@@ -5,4 +5,8 @@ on:
       - master
 jobs:
   update_release_draft:
-    uses: jetty/.github/.github/workflows/release-drafter.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
