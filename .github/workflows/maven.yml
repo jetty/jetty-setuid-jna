@@ -1,0 +1,13 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Verify
+    uses: jetty/.github/.github/workflows/maven-ci.yml@master
+    with:
+      ff-site-run: false
+      jdk-matrix: '[ "17", "21" ]'
