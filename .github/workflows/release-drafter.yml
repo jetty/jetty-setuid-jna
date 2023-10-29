@@ -5,4 +5,4 @@ on:
       - master
 jobs:
   update_release_draft:
-    uses: jetty/.github/.github/workflows/release-drafter.yml
+    uses: jetty/.github/.github/workflows/release-drafter.yml@main
