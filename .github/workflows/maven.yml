@@ -9,5 +9,4 @@ jobs:
     name: Verify
     uses: jetty/.github/.github/workflows/maven-ci.yml@main
     with:
-      ff-site-run: false
       jdk-matrix: '[ "17", "21" ]'
