@@ -49,6 +49,11 @@
     </dependency>
   </dependencies>
 
+
+  <!--
+  those repositories are only here because the parent is not released yet
+  and so will be removed once it's done
+  -->
   <repositories>
     <repository>
       <releases>
