@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.eclipse.jetty.toolchain</groupId>
-    <artifactId>jetty-toolchain</artifactId>
-    <version>1.8-parent-SNAPSHOT</version>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-parent</artifactId>
+    <version>26-20231208.043318-1</version>
   </parent>
   <groupId>org.eclipse.jetty.toolchain.setuid</groupId>
   <artifactId>jetty-setuid-jna</artifactId>
