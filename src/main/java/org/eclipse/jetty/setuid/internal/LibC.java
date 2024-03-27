@@ -11,11 +11,12 @@
 // ========================================================================
 //
 
-package org.eclipse.jetty.setuid;
+package org.eclipse.jetty.setuid.internal;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Platform;
+import org.eclipse.jetty.setuid.RLimit;
 
 /**
  * Class is for changing user and groupId, it can also be use to retrieve user information by using getpwuid(uid) or getpwnam(username) of both linux and unix

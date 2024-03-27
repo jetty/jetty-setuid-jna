@@ -11,7 +11,7 @@
 // ========================================================================
 //
 
-package org.eclipse.jetty.setuid;
+package org.eclipse.jetty.setuid.internal;
 
 import com.sun.jna.Structure;
 

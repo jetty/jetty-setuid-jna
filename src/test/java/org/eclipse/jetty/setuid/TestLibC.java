@@ -18,6 +18,9 @@ import java.nio.file.Path;
 import java.nio.file.attribute.PosixFilePermission;
 import java.util.Set;
 
+import org.eclipse.jetty.setuid.internal.Group;
+import org.eclipse.jetty.setuid.internal.LibC;
+import org.eclipse.jetty.setuid.internal.Passwd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
