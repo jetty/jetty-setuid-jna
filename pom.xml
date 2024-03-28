@@ -21,14 +21,14 @@
     <jdk.version.minimum>17</jdk.version.minimum>
     <jetty-test-helper.version>6.2</jetty-test-helper.version>
     <jetty.git.repo>jetty-setuid-jna</jetty.git.repo>
-    <jetty.version>12.0.6</jetty.version>
+    <jetty.version>12.0.7</jetty.version>
     <jna.version>5.14.0</jna.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna</artifactId>
+      <artifactId>jna-jpms</artifactId>
       <version>${jna.version}</version>
     </dependency>
     <dependency>
@@ -57,6 +57,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
             <compilerArgument>-Xlint:all</compilerArgument>
+            <testCompilerArgument>-nowarn</testCompilerArgument>
           </configuration>
         </plugin>
       </plugins>

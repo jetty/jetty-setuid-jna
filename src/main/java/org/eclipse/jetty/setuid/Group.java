@@ -17,14 +17,16 @@ import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
 
 /**
- * Class is the equivalent java class used for holding values from native c code structure group. for more information please see man pages for getgrnam and getgrgid
+ * <p>Class is the equivalent java class used for holding values from native c code structure group.</p>
+ * <p>For more information please see man pages for {@code getgrnam()} and {@code getgrgid()}.</p>
+ * <pre>{@code
  * struct group {
- *             char   *gr_name;        // group name 
- *             char   *gr_passwd;     // group password
- *             gid_t   gr_gid;          // group ID 
- *             char  **gr_mem;        //  group members 
- *         };
- *
+ *     char   *gr_name;    // group name
+ *     char   *gr_passwd;  // group password
+ *     gid_t   gr_gid;     // group ID
+ *     char  **gr_mem;     //  group members
+ * };
+ * }</pre>
  */
 @Structure.FieldOrder({"_grName", "_grPasswd", "_grGid", "_grMem"})
 public class Group extends Structure
@@ -34,6 +36,9 @@ public class Group extends Structure
     public int _grGid; /* group id */
     public Pointer _grMem; /* group members */
 
+    public Group()
+    {
+    }
 
     public String getGrName()
     {

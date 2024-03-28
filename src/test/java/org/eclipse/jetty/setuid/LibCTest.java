@@ -18,13 +18,14 @@ import java.nio.file.Path;
 import java.nio.file.attribute.PosixFilePermission;
 import java.util.Set;
 
+import org.eclipse.jetty.setuid.internal.LibC;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestLibC
+public class LibCTest
 {
     @Test
     public void testSetuid() throws Exception
@@ -55,7 +56,7 @@ public class TestLibC
 
         // get the group using the roots groupid
         Group gr1 = LibC.INSTANCE.getgrgid(passwd1.getPwGid());
-        // get the group name using the aquired name
+        // get the group name using the acquired name
         Group gr2 = LibC.INSTANCE.getgrnam(gr1.getGrName());
 
         assertEquals(gr1.getGrName(), gr2.getGrName());

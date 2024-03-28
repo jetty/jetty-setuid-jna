@@ -21,6 +21,15 @@ public class RLimit extends Structure
     public long _soft;
     public long _hard;
 
+    public RLimit()
+    {
+    }
+
+    public RLimit(long _soft, long _hard)
+    {
+        this._soft = _soft;
+        this._hard = _hard;
+    }
 
     public long getSoft ()
     {
@@ -46,5 +55,4 @@ public class RLimit extends Structure
     {
         return "rlimit_nofiles (soft="+_soft+", hard="+_hard+")";
     }
-
 }
