@@ -57,6 +57,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
             <compilerArgument>-Xlint:all</compilerArgument>
+            <testCompilerArgument>-nowarn</testCompilerArgument>
           </configuration>
         </plugin>
       </plugins>

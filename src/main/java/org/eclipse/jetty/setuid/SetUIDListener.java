@@ -16,9 +16,7 @@ package org.eclipse.jetty.setuid;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.NetworkConnector;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.setuid.internal.Group;
 import org.eclipse.jetty.setuid.internal.LibC;
-import org.eclipse.jetty.setuid.internal.Passwd;
 import org.eclipse.jetty.util.component.LifeCycle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +44,10 @@ public class SetUIDListener implements LifeCycle.Listener
     private boolean _startServerAsPrivileged;
     private boolean _clearSupplementalGroups;
     private RLimit _rlimitNoFiles = null;
+
+    public SetUIDListener()
+    {
+    }
 
     public void setUsername(String username)
     {

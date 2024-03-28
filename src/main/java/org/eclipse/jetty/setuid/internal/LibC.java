@@ -16,11 +16,13 @@ package org.eclipse.jetty.setuid.internal;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Platform;
+import org.eclipse.jetty.setuid.Group;
+import org.eclipse.jetty.setuid.Passwd;
 import org.eclipse.jetty.setuid.RLimit;
 
 /**
- * Class is for changing user and groupId, it can also be use to retrieve user information by using getpwuid(uid) or getpwnam(username) of both linux and unix
- * systems
+ * <p>Class is for changing user and groupId, it can also be used to retrieve user information
+ * by using {@code getpwuid(uid)} or {@code getpwnam(username)} of both linux and unix systems.</p>
  */
 public interface LibC extends Library
 {
@@ -47,17 +49,17 @@ public interface LibC extends Library
     int setrlimit(int resource, RLimit rlimit);
 
     /**
-     * Compile and run the following C program to get the <code>RLIMIT_NOFILE</code> value of you OS of choice.
-     * <pre>
-     * #include &lt;stdio.h&gt;
-     * #include &lt;sys/resource.h&gt;
+     * <p>Compile and run the following C program to get the {@code RLIMIT_NOFILE} value of you OS of choice.</p>
+     * <pre>{@code
+     * #include <stdio.h>
+     * #include <sys/resource.h>
      *
      * int main()
      * {
      *   printf("RLIMIT_NOFILE = %d\n", RLIMIT_NOFILE);
      *   return 0;
      * }
-     * </pre>
+     * }</pre>
      */
     class Constants
     {

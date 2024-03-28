@@ -11,22 +11,24 @@
 // ========================================================================
 //
 
-package org.eclipse.jetty.setuid.internal;
+package org.eclipse.jetty.setuid;
 
 import com.sun.jna.Structure;
 
 /**
- * Class is the equivalent java class used for holding values from native c code structure passwd. for more information please see man pages for getpwuid and getpwnam
- *   struct passwd {
- *        char    *pw_name;      // user name
- *        char    *pw_passwd;   // user password
- *        uid_t   pw_uid;         // user id
- *        gid_t   pw_gid;         // group id
- *        char    *pw_gecos;     // real name
- *        char    *pw_dir;        // home directory
- *       char    *pw_shell;      // shell program
- *    };
- *
+ * <p>Class is the equivalent java class used for holding values from native c code structure passwd.</p>
+ * <p>For more information please see man pages for {@code getpwuid()} and {@code getpwnam()}</p>
+ * <pre>{@code
+ * struct passwd {
+ *     char    *pw_name;    // user name
+ *     char    *pw_passwd;  // user password
+ *     uid_t   pw_uid;      // user id
+ *     gid_t   pw_gid;      // group id
+ *     char    *pw_gecos;   // real name
+ *     char    *pw_dir;     // home directory
+ *     char    *pw_shell;   // shell program
+ * };
+ * }</pre>
  */
 @Structure.FieldOrder({"_pwName", "_pwPasswd", "_pwUid", "_pwGid", "_pwGecos", "_pwDir", "_pwShell"})
 public class Passwd extends Structure
@@ -38,6 +40,10 @@ public class Passwd extends Structure
     public String _pwGecos; /* real name */
     public String _pwDir; /* home directory */
     public String _pwShell; /* shell program */
+
+    public Passwd()
+    {
+    }
 
     public String getPwName()
     {

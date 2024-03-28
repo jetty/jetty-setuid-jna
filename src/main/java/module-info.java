@@ -13,13 +13,10 @@
 
 module org.eclipse.jetty.setuid.jna
 {
-    requires com.sun.jna;
+    requires transitive com.sun.jna;
     requires org.eclipse.jetty.server;
-    requires org.eclipse.jetty.util;
+    requires transitive org.eclipse.jetty.util;
     requires org.slf4j;
-
-    // needed to allow internal classes to use com.sun.jna
-    opens org.eclipse.jetty.setuid.internal;
 
     exports org.eclipse.jetty.setuid;
 }
