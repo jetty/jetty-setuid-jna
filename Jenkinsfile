@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline {
-  agent any
+  agent none
   options {
     durabilityHint('PERFORMANCE_OPTIMIZED')
     buildDiscarder(logRotator(numToKeepStr: '7', artifactNumToKeepStr: '2'))
@@ -11,7 +11,7 @@ pipeline {
     stage( "Parallel Stage" ) {
       parallel {
         stage( "Build / Test - JDK17" ) {
-          agent { node { label 'linux' } }
+          agent { node { label 'linux-light' } }
           options { timeout( time: 120, unit: 'MINUTES' ) }
           steps {
             mavenBuild( "jdk17", "clean install javadoc:javadoc" )
