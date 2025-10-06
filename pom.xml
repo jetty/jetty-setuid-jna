@@ -22,7 +22,7 @@
     <jetty-test-helper.version>6.4</jetty-test-helper.version>
     <jetty.git.repo>jetty-setuid-jna</jetty.git.repo>
     <jetty.version>12.1.1</jetty.version>
-    <jna.version>5.18.0</jna.version>
+    <jna.version>5.18.1</jna.version>
   </properties>
 
   <dependencies>
